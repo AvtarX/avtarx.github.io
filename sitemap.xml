@@ -1,0 +1,35 @@
+<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--
+ created with Free Online Sitemap Generator www.xml-sitemaps.com 
+-->
+<url>
+<loc>https://avtarx.github.io/</loc>
+<lastmod>2026-03-30T09:16:16+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://avtarx.github.io/index.html</loc>
+<lastmod>2026-03-30T09:16:16+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://avtarx.github.io/blogs.html</loc>
+<lastmod>2026-03-30T09:16:16+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://avtarx.github.io/about.html</loc>
+<lastmod>2026-03-30T09:16:16+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://avtarx.github.io/terms.html</loc>
+<lastmod>2026-03-30T09:16:16+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://avtarx.github.io/blogs_temp.html</loc>
+<lastmod>2026-03-30T09:16:16+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+</urlset>
