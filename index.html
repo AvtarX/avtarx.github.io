@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AvtarX — AI Avatar Generator | AsuraX</title>
+  <meta name="description"
+    content="AvtarX is a privacy-first AI avatar generator with secure API routing, ephemeral processing, and premium output quality.">
+  <meta name="keywords"
+    content="AI avatar generator, free avatar, client-side AI, privacy avatar, digital identity, AsuraX, AvtarX">
+  <meta name="author" content="Adhyansh Verma — AsuraX">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://avtarx.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AvtarX — AI Avatar Generator">
+  <meta property="og:description"
+    content="Generate stunning AI avatars in your browser with secure API routing and ephemeral processing.">
+  <meta property="og:url" content="https://avtarx.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AvtarX — AI Avatar Generator">
+  <meta name="twitter:description"
+    content="Generate stunning AI avatars directly in your browser with secure API routing.">
+  <meta name="theme-color" content="#0c0a08">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AvtarX",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "description": "Privacy-first AI avatar generator with secure API routing and local-first controls. Part of the AsuraX tools hub.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "creator": { "@type": "Person", "name": "Adhyansh Verma" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&family=Orbitron:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">AX</div>
+      Avtar<span style="color:var(--accent)">X</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Generator</a>
+      <a href="blogs.html">Research</a>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn btn-ghost" id="cache-toggle" title="Toggle prompt caching">Cache: OFF</button>
+      <button class="btn btn-outline" id="rainbow-toggle" title="Toggle RGB accent mode">RGB: OFF</button>
+      <button class="hamburger-btn" id="hamburger-open" aria-label="Open menu" aria-expanded="false"
+        aria-controls="mob-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mob-drawer" id="mob-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-logo">
+        <div class="nav-logo-icon" style="width:28px;height:28px;font-size:12px;">AX</div> AvtarX
+      </div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu" aria-expanded="false"
+        aria-controls="mob-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <a class="drawer-link active" href="index.html">Generator</a>
+      <a class="drawer-link" href="blogs.html">Research</a>
+      <a class="drawer-link" href="about.html">About</a>
+      <a class="drawer-link" href="terms.html">Terms</a>
+    </div>
+    <div class="drawer-footer">© 2026 AvtarX · AsuraX Hub</div>
+  </aside>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Next-Gen · Local-First UI · Secure API Runtime
+      </div>
+      <h1 class="hero-title">
+        Generate <em class="accent-text">AI Avatars</em><br>Without Limits
+      </h1>
+      <p class="hero-desc">
+        AvtarX delivers a local-first generation console with secure API routing to hosted inference. Prompts are
+        processed ephemerally without account tracking or permanent session storage.
+      </p>
+      <div class="hero-actions">
+        <a href="#generator" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3" />
+          </svg>
+          Launch Generator
+        </a>
+        <a href="about.html" class="btn btn-ghost btn-lg">Learn More</a>
+      </div>
+
+      <div class="proof-strip">
+        <div class="proof-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Local-First UX
+        </div>
+        <div class="proof-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          No Login Required
+        </div>
+        <div class="proof-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Instant Generation
+        </div>
+        <div class="proof-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Free Forever
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENERATOR -->
+  <section id="generator" style="padding: 0 48px 100px; position:relative; z-index:2;">
+    <div class="generator-section">
+      <div class="gen-section-head">
+        <div class="section-tag"><span class="dot"></span> Core Engine</div>
+        <h2 class="section-title">Avatar <em class="accent-text">Generation Console</em></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Describe your avatar precisely. Select dimensions. Deploy.
+        </p>
+      </div>
+      <div class="generator-box">
+        <div class="gen-header">
+          <div class="gen-header-icon">⚡</div>
+          <div>
+            <div class="gen-header-title">AvtarX Engine v2.0</div>
+            <div class="gen-header-sub">SECURE API RUNTIME · EPHEMERAL PROCESSING</div>
+          </div>
+        </div>
+
+        <form id="avatar-form">
+          <div class="input-group">
+            <div class="prompt-head">
+              <label for="prompt">Prompt <span class="required">*</span></label>
+              <button type="button" class="btn btn-ghost prompt-clear-btn" id="prompt-clear">Clear</button>
+            </div>
+            <textarea id="prompt" class="input-field" rows="4"
+              placeholder="A futuristic cyborg samurai with holographic blue eyes, neon orange armor, hyperrealistic, 8K render..."
+              required></textarea>
+            <div class="example-prompts">
+              <span class="ex-prompt"
+                data-add="add: glowing code reflections in eyes, dark background, neon blue lighting, cyberpunk vibe">💻
+                Cyberpunk Glow</span>
+              <span class="ex-prompt"
+                data-add="add: semi-anime facial structure, smooth shading, vibrant colors, soft glow">🌸 Anime
+                Soft</span>
+              <span class="ex-prompt"
+                data-add="add: luxury outfit, golden rim lighting, dark elegant background, cinematic shadows">✨ Luxury
+                Cinematic</span>
+            </div>
+          </div>
+
+          <div class="input-row">
+            <div class="input-group input-group-compact">
+              <label for="size">Output Resolution</label>
+              <select id="size" class="input-field">
+                <option value="256">256 × 256 — Draft</option>
+                <option value="512" selected>512 × 512 — Standard</option>
+                <option value="1024">1024 × 1024 — HD Pro</option>
+              </select>
+            </div>
+            <div class="input-group input-group-compact">
+              <label for="art-style">Art Style</label>
+              <select id="art-style" class="input-field">
+                <option value="realistic">Hyperrealistic</option>
+                <option value="anime">Anime / Cel-shade</option>
+                <option value="cyberpunk">Cyberpunk</option>
+                <option value="painterly">Digital Painterly</option>
+                <option value="pixel">Pixel Art</option>
+                <option value="abstract">Abstract / Concept</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-row input-row-advanced">
+            <div class="input-group input-group-compact">
+              <label for="steps">Inference Steps: <span id="steps-val" class="steps-value">9</span></label>
+              <div class="range-wrap">
+                <input type="range" id="steps" min="1" max="20" value="9">
+              </div>
+            </div>
+            <div class="input-group input-group-compact input-group-align-end">
+              <div class="seed-row">
+                <label class="checkbox-wrap checkbox-wrap-tight" for="randomize-seed">
+                  <input type="checkbox" id="randomize-seed" checked>
+                  Randomize Seed
+                </label>
+                <input type="number" id="seed" class="input-field seed-input" value="42" min="0" disabled
+                  aria-label="Seed value">
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group" style="margin-top: 24px;">
+            <label>Style Modifiers</label>
+            <div class="style-pills" id="style-modifiers" role="group" aria-label="Style modifiers">
+              <span class="style-pill active" data-val="cinematic">Cinematic</span>
+              <span class="style-pill" data-val="neon">Neon Lit</span>
+              <span class="style-pill" data-val="dark">Dark Mood</span>
+              <span class="style-pill" data-val="holo">Holographic</span>
+              <span class="style-pill" data-val="glitch">Glitch</span>
+              <span class="style-pill" data-val="minimal">Minimal</span>
+              <span class="style-pill" data-val="epic">Epic Scale</span>
+            </div>
+          </div>
+
+          <button type="submit" class="gen-btn" id="gen-btn">
+            ⚡ &nbsp; Initiate Generation Sequence
+          </button>
+        </form>
+
+        <div class="result-panel" id="result-container">
+          <div style="text-align:center; margin-bottom:20px;">
+            <span class="result-status">▶ Generation Complete</span>
+          </div>
+          <div class="result-img-wrap">
+            <img id="generated-image" src="" alt="Your Generated Avatar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div class="section-tag"><span class="dot"></span> Why AvtarX</div>
+      <h2 class="section-title">Built for the <em class="accent-text">Modern Digital Era</em></h2>
+      <p class="section-subtitle">Every design decision was made with edge-level security, zero-latency performance, and
+        uncompromising privacy at its core.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <div class="feature-name">Secure API Routing</div>
+          <div class="feature-desc">Prompts are sent only for inference to the configured model endpoint and are handled
+            as transient request data without account-linked storage.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+              <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+            </svg>
+          </div>
+          <div class="feature-name">Instant Output</div>
+          <div class="feature-desc">Generation starts immediately with progressive status updates, including GPU warm-up
+            awareness and timeout-safe request handling.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7" />
+              <rect x="14" y="3" width="7" height="7" />
+              <rect x="14" y="14" width="7" height="7" />
+              <rect x="3" y="14" width="7" height="7" />
+            </svg>
+          </div>
+          <div class="feature-name">Multi-Resolution Export</div>
+          <div class="feature-desc">Generate avatars from ultra-compact 256px for chat icons to crisp 1024px HD Pro for
+            portfolios, professional branding, and game assets.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 4 23 10 17 10" />
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+            </svg>
+          </div>
+          <div class="feature-name">Session Memory Cache</div>
+          <div class="feature-desc">Opt-in local caching preserves prompts and outputs using browser IndexedDB, built
+            for larger high-resolution assets without LocalStorage quota issues.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path
+                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+          </div>
+          <div class="feature-name">Offline Capable</div>
+          <div class="feature-desc">Core UI assets are cached for offline access. New generations require network access
+            to the hosted model endpoint.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <div class="feature-name">Style Intelligence</div>
+          <div class="feature-desc">Combine art styles, modifiers, and detailed prompts to direct visual output. From
+            photorealistic to abstract — full creative latitude is yours.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="steps-section">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div class="section-tag"><span class="dot"></span> Process</div>
+      <h2 class="section-title">How It <em class="accent-text">Works</em></h2>
+      <p class="section-subtitle">From a text description to a downloadable avatar file in seconds.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-title">Write Your Prompt</div>
+          <div class="step-desc">Describe your avatar in precise detail — personality, aesthetics, style, atmosphere.
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-title">Select Parameters</div>
+          <div class="step-desc">Choose your output resolution, art style, and any style modifiers that match your
+            vision.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-title">Generate Securely</div>
+          <div class="step-desc">Hit Generate. AvtarX sends your request through secure API routing and returns the
+            final image directly to your browser session.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-title">Download & Deploy</div>
+          <div class="step-desc">Save your avatar as a clean PNG file, ready for any platform or application.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-box">
+      <div class="section-tag" style="justify-content:center;margin-bottom:20px;"><span class="dot"></span> Get Started
+      </div>
+      <h2 class="section-title">Your Avatar.<br><em class="accent-text">Your Device.</em></h2>
+      <p class="cta-text">No sign-up. No payment. No persistent data harvesting. Join thousands who generate avatars the
+        privacy-first way.</p>
+      <a href="#generator" class="btn btn-primary btn-lg">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3" />
+        </svg>
+        Start Generating
+      </a>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT (meaningful, structured) -->
+  <section style="position:relative;z-index:2;padding:0 48px 80px;">
+    <div style="max-width:920px;margin:0 auto;">
+      <article class="prose-card">
+        <h2>What is AvtarX? The Future of Digital Identity Generation</h2>
+        <p>AvtarX is a next-generation, privacy-forward AI avatar generation platform with a local-first browser
+          experience and secure API routing for hosted inference. Developed under the AsuraX tools ecosystem by Adhyansh
+          Verma, AvtarX focuses on minimizing retained data while preserving a premium generation workflow in the
+          browser.</p>
+        <p>In an age where digital identity is as significant as physical presence, your avatar serves as your
+          front-facing representation across gaming platforms, social media networks, professional portfolios,
+          decentralized communities, and the emerging metaverse. AvtarX provides the tooling to sculpt that identity
+          with absolute precision and, crucially, absolute privacy.</p>
+
+        <h2>The Local-First Advantage: Privacy by Architecture</h2>
+        <p>Most AI image generators route prompts through complex multi-tenant systems with opaque retention behavior.
+          AvtarX uses explicit endpoint routing and transparent runtime controls so the user can see when requests are
+          sent, how loading states behave, and when outputs are returned.</p>
+        <p>The IndexedDB caching feature, available as an opt-in toggle, further extends this philosophy. Session data —
+          including prompt history and generated image outputs — stays in-browser under same-origin policies and can be
+          cleared instantly by turning cache off.</p>
+
+        <h2>Avatars Across the Digital Landscape</h2>
+        <p>AvtarX supports three output resolutions tailored to distinct use cases. The 256×256 draft resolution is
+          ideal for messenger profile pictures, forum avatars, and embedded thumbnails where bandwidth efficiency
+          matters. The 512×512 standard mode covers the majority of social media profile picture requirements — suitable
+          for Twitter, Discord, LinkedIn, Reddit, and most creative platform uploads. The 1024×1024 HD Pro mode targets
+          demanding applications: game asset libraries, professional digital branding materials, high-resolution profile
+          pages, and print-ready digital art exports.</p>
+        <p>Combined with six distinct art style directions — Hyperrealistic, Anime, Cyberpunk, Digital Painterly, Pixel
+          Art, and Abstract — and seven stackable style modifier tags, AvtarX provides a combinatorial space spanning
+          thousands of distinct aesthetic outcomes from a single descriptive prompt.</p>
+
+        <h2>Part of the AsuraX Tools Hub</h2>
+        <p>AvtarX is a flagship application within the AsuraX digital tools hub — a growing collection of high-fidelity,
+          privacy-first web applications unified by a single design language and engineering philosophy. By combining
+          modern browser APIs, resilient PWA caching, and explicit API orchestration, AsuraX tools deliver
+          professional-quality output with strong user control and transparent behavior.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Avtar<span>X</span> <span
+          style="color:var(--text-3);font-size:12px;font-family:var(--font-m);margin-left:8px;">by AsuraX</span></div>
+      <nav class="footer-links">
+        <a href="index.html">Generator</a>
+        <a href="blogs.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <div class="footer-copy">© <span id="yr"></span> AvtarX · All rights reserved</div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

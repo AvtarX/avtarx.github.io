@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Hub — AvtarX | AsuraX</title>
+  <meta name="description" content="The AvtarX Research Hub: deep technical articles on privacy-first AI architecture, prompt engineering, browser security, and local-first web UX.">
+  <meta name="keywords" content="AI avatar research, client-side architecture, prompt engineering, web privacy, browser API, AsuraX blog">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://avtarx.github.io/blogs.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">AX</div>Avtar<span style="color:var(--accent)">X</span></a>
+    <div class="nav-links">
+      <a href="index.html">Generator</a>
+      <a href="blogs.html" class="active">Research</a>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn btn-ghost" id="cache-toggle">Cache: OFF</button>
+      <button class="btn btn-outline" id="rainbow-toggle">RGB: OFF</button>
+      <button class="hamburger-btn" id="hamburger-open" aria-label="Open menu" aria-expanded="false" aria-controls="mob-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mob-drawer" id="mob-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-logo"><div class="nav-logo-icon" style="width:28px;height:28px;font-size:12px;">AX</div> AvtarX</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu" aria-expanded="false" aria-controls="mob-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="drawer-body">
+      <a class="drawer-link" href="index.html">Generator</a>
+      <a class="drawer-link active" href="blogs.html">Research</a>
+      <a class="drawer-link" href="about.html">About</a>
+      <a class="drawer-link" href="terms.html">Terms</a>
+    </div>
+    <div class="drawer-footer">© 2026 AvtarX · AsuraX Hub</div>
+  </aside>
+
+  <main class="page-wrap" style="max-width:1100px;">
+    <div class="page-eyebrow">Knowledge Base</div>
+    <h1 class="page-heading">Research <em class="accent-text">&amp; Insights</em></h1>
+    <p class="page-lead">Deep technical articles on local-first UX, secure inference routing, prompt engineering, and browser security.</p>
+
+    <!-- Featured Article -->
+    <div class="prose-card" style="margin-bottom:48px;">
+      <div class="blog-tag" style="margin-bottom:16px;">Featured</div>
+      <h2 style="margin-top:0; border:none; font-size:clamp(22px,3vw,32px);">The Local-First Paradigm: Transparent AI UX for Privacy-Respecting Products</h2>
+      <p style="margin-bottom:12px;"><span style="font-family:var(--font-m);font-size:11px;color:var(--text-3);">By Adhyansh Verma · March 2026 · 12 min read</span></p>
+      <p>The dominant model for AI services in 2026 involves sending user inputs — often highly personal, commercially sensitive, or creatively proprietary — to remote inference endpoints operated by companies with commercial incentives that often misalign with user interests. Your prompt is routed across the internet, processed on GPU clusters you do not own, potentially stored for model fine-tuning, and returned to you as output. This model, while operationally convenient for service providers, represents a significant structural privacy risk for users.</p>
+      <p>AvtarX was built as a direct counterargument to opaque architecture. Instead of pretending generation is fully local, the platform uses explicit endpoint routing, status-aware UI states, and opt-in browser-side caching so users can understand exactly what runs locally and what is sent to hosted inference.</p>
+      <p>The practical implications extend beyond privacy. Latency drops to hardware-bound minimums when server round-trips are eliminated. Rate limits imposed by API providers become irrelevant. Service outages affecting remote inference clusters cease to matter. The tool functions as reliably as your browser. These performance and reliability benefits compound the privacy advantages to produce a user experience that is superior by nearly every measurable metric.</p>
+      <p>Modern browser JavaScript engines — Chrome's V8, Firefox's SpiderMonkey — are capable of executing surprisingly sophisticated computational tasks at native speeds. WebAssembly extends this further, enabling near-native execution of code compiled from C, C++, and Rust within the browser sandbox. The client-side paradigm is not a technical compromise; it is an architectural choice enabled by a decade of browser engine advancement that most web developers have yet to fully leverage.</p>
+      <a href="blogs_temp.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="section-tag" style="margin-bottom:24px;"><span class="dot"></span> All Articles</div>
+    <div class="blog-grid">
+
+      <article class="blog-card">
+        <div class="blog-card-thumb">
+          <div class="blog-card-thumb-inner">🔐</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Security</div>
+          <div class="blog-title">IndexedDB Security: What It Protects and What It Doesn't</div>
+          <div class="blog-excerpt">A technical breakdown of browser same-origin boundaries, IndexedDB isolation, and practical attack surfaces users should understand before enabling session caching.</div>
+          <div class="blog-meta">
+            <span>March 2026</span>
+            <span class="blog-meta-dot"></span>
+            <span>8 min</span>
+          </div>
+          <a href="blogs_temp.html" class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card-thumb">
+          <div class="blog-card-thumb-inner">✍️</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Prompt Engineering</div>
+          <div class="blog-title">Prompt Architecture: Writing Descriptions That Generate Precision</div>
+          <div class="blog-excerpt">Mastering AI avatar generation begins with understanding how generative systems parse natural language. This guide provides a structural framework for high-precision prompt construction.</div>
+          <div class="blog-meta">
+            <span>February 2026</span>
+            <span class="blog-meta-dot"></span>
+            <span>10 min</span>
+          </div>
+          <a href="blogs_temp.html" class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card-thumb">
+          <div class="blog-card-thumb-inner">🎨</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Design</div>
+          <div class="blog-title">Dark Mode Engineering: Beyond the Color Scheme</div>
+          <div class="blog-excerpt">How the AvtarX design system constructs a deep-space dark mode that balances aesthetic impact with genuine readability and accessibility — from CSS token architecture to glassmorphism implementation.</div>
+          <div class="blog-meta">
+            <span>February 2026</span>
+            <span class="blog-meta-dot"></span>
+            <span>9 min</span>
+          </div>
+          <a href="blogs_temp.html" class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card-thumb">
+          <div class="blog-card-thumb-inner">⚡</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Performance</div>
+          <div class="blog-title">The Zero-Latency Generation Model: Local vs Cloud Benchmarks</div>
+          <div class="blog-excerpt">A technical comparison of generation latency, failure modes, and throughput between cloud-API-dependent tools and client-side alternatives. The numbers are more decisive than the narrative.</div>
+          <div class="blog-meta">
+            <span>January 2026</span>
+            <span class="blog-meta-dot"></span>
+            <span>7 min</span>
+          </div>
+          <a href="blogs_temp.html" class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card-thumb">
+          <div class="blog-card-thumb-inner">🌐</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Architecture</div>
+          <div class="blog-title">Building Offline-First Web Apps Without a Service Worker</div>
+          <div class="blog-excerpt">An exploration of how minimal-dependency design produces applications more resilient than complex PWA implementations — and why simplicity is often the superior defensive architecture.</div>
+          <div class="blog-meta">
+            <span>January 2026</span>
+            <span class="blog-meta-dot"></span>
+            <span>11 min</span>
+          </div>
+          <a href="blogs_temp.html" class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card-thumb">
+          <div class="blog-card-thumb-inner">🛡️</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Privacy</div>
+          <div class="blog-title">Zero-Knowledge Tooling: Architectural Privacy vs Policy Privacy</div>
+          <div class="blog-excerpt">There are two kinds of privacy guarantees on the web: those made by privacy policies, and those enforced by architecture. Only one of them is cryptographically verifiable.</div>
+          <div class="blog-meta">
+            <span>December 2025</span>
+            <span class="blog-meta-dot"></span>
+            <span>13 min</span>
+          </div>
+          <a href="blogs_temp.html" class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Avtar<span>X</span> <span style="color:var(--text-3);font-size:12px;font-family:var(--font-m);margin-left:8px;">by AsuraX</span></div>
+      <nav class="footer-links">
+        <a href="index.html">Generator</a>
+        <a href="blogs.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <div class="footer-copy">© <span id="yr"></span> AvtarX · All rights reserved</div>
+    </div>
+  </footer>
+  <script type="module" src="js/app.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

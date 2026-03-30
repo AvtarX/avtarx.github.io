@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About AvtarX — AsuraX Tools Hub</title>
+  <meta name="description" content="Learn about AvtarX and the AsuraX Tools Hub. Discover our mission to democratize privacy-first AI tooling with local-first UX and secure API routing.">
+  <meta name="keywords" content="AsuraX, AvtarX about, Adhyansh Verma, client-side AI tools, privacy tools, web application development">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://avtarx.github.io/about.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">AX</div>
+      Avtar<span style="color:var(--accent)">X</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Generator</a>
+      <a href="blogs.html">Research</a>
+      <a href="about.html" class="active">About</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn btn-ghost" id="cache-toggle">Cache: OFF</button>
+      <button class="btn btn-outline" id="rainbow-toggle">RGB: OFF</button>
+      <button class="hamburger-btn" id="hamburger-open" aria-label="Open menu" aria-expanded="false" aria-controls="mob-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mob-drawer" id="mob-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-logo"><div class="nav-logo-icon" style="width:28px;height:28px;font-size:12px;">AX</div> AvtarX</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu" aria-expanded="false" aria-controls="mob-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="drawer-body">
+      <a class="drawer-link" href="index.html">Generator</a>
+      <a class="drawer-link" href="blogs.html">Research</a>
+      <a class="drawer-link active" href="about.html">About</a>
+      <a class="drawer-link" href="terms.html">Terms</a>
+    </div>
+    <div class="drawer-footer">© 2026 AvtarX · AsuraX Hub</div>
+  </aside>
+
+  <main class="page-wrap">
+    <div class="page-eyebrow">About the Platform</div>
+    <h1 class="page-heading">The <em class="accent-text">AsuraX</em> Ecosystem</h1>
+    <p class="page-lead">A new generation of digital tools built on one principle: your data belongs to you, and only you.</p>
+
+    <!-- Stats -->
+    <div class="about-stat-grid">
+      <div class="stat-card">
+        <div class="stat-value rainbow-text">100%</div>
+        <div class="stat-label">Local-First UX</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value rainbow-text">1</div>
+        <div class="stat-label">Secure API Endpoint</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value rainbow-text"><span class="auto-age">15</span>+</div>
+        <div class="stat-label">Creator Age (Years)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value rainbow-text">∞</div>
+        <div class="stat-label">Free Generations</div>
+      </div>
+    </div>
+
+    <!-- Creator Card -->
+    <div class="creator-card">
+      <div class="creator-avatar">A</div>
+      <div class="creator-info">
+        <div class="creator-name">Adhyansh Verma</div>
+        <div class="creator-role">Founder · AsuraX &amp; AvtarX · Age <span class="auto-age">15</span></div>
+        <div class="creator-bio">
+          Building production-grade, privacy-first tools from scratch. Adhyansh founded AsuraX to prove that powerful web applications can deliver strong user control without opaque data collection. AvtarX is the flagship proof-of-concept — a professional-grade AI avatar engine with local-first UX and secure hosted inference routing.
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Prose -->
+    <div class="prose-card">
+      <h2>Our Mission</h2>
+      <p>AsuraX was founded on a foundational conviction: the most powerful software should also be the most private. In an era dominated by cloud-centric architectures where every click, every keystroke, and every creative prompt is routed through corporate servers, logged in databases, and potentially used to train competing AI models, AsuraX took a deliberately contrarian path.</p>
+      <p>We build local-first interfaces where controls, cache, and UX state stay on your device. This is not merely a philosophical stance; it is a technical discipline that demands significantly more engineering rigor than simply exposing an API wrapper as a web interface.</p>
+      <p>AvtarX is the embodiment of this ethos. Generating an avatar still requires dispatching a prompt to a remote inference endpoint, but the platform is designed for transparent routing, strict timeouts, explicit status states, and opt-in local persistence using IndexedDB. The user always stays in control of what is stored and what is transmitted.</p>
+
+      <h2>The AsuraX Tools Hub</h2>
+      <p>AvtarX is one application within a growing ecosystem. The AsuraX hub is designed as a cohesive suite of high-fidelity utilities sharing a unified design language, engineering philosophy, and zero-toleration policy toward user data collection. Adjacent tools in the AsuraX portfolio follow the same architectural mandate, from financial utilities to document processors — all operating natively in the browser with industry-grade reliability.</p>
+      <p>The shared design system visible in AvtarX — the deep-space background palette, the neon cyan accent language, the Orbitron typographic headers paired with DM Sans for body legibility — will be familiar across every AsuraX application. Consistency is trust, and trust is our ultimate product.</p>
+
+      <h2>Our Engineering Principles</h2>
+      <ul>
+        <li><strong>Resilience First.</strong> Applications must degrade gracefully around third-party API failures, sleep states, and rate limits.</li>
+        <li><strong>Privacy by Architecture.</strong> Data handling must be explicit, minimal, and easy for users to inspect and clear.</li>
+        <li><strong>Performance Without Compromise.</strong> Efficient browser UX, lean rendering, and timeout-safe API orchestration are required together.</li>
+        <li><strong>Aesthetic Rigour.</strong> Professional tools should look professional. The same attention dedicated to engineering correctness is dedicated to visual design excellence.</li>
+        <li><strong>Radical Transparency.</strong> Open architecture means you can inspect exactly what the code does. There are no hidden processes in AsuraX tools.</li>
+      </ul>
+
+      <h2>The Technology Behind AvtarX</h2>
+      <p>AvtarX is built on a foundation of modern, standards-compliant web technologies. HTML5 structures the semantic document layer. CSS custom properties power the design token system, and the JavaScript runtime is split into focused modules for UI control, storage, and API orchestration to keep concerns isolated and maintainable.</p>
+      <p>The opt-in caching module uses IndexedDB so high-resolution outputs can be persisted without LocalStorage quota failures. It writes only user-visible state and can be cleared instantly by turning caching off. No telemetry hooks and no hidden background synchronization are used.</p>
+      <p>The visual design draws on several modern CSS capabilities: <code>backdrop-filter</code> for glassmorphic panels, multi-stop <code>radial-gradient</code> backgrounds for the ambient glow fields, CSS grid with <code>auto-fit</code> and <code>minmax</code> for responsive card layouts that require zero JavaScript to reflow, and precisely timed <code>@keyframe</code> animation chains for the entrance sequence and the continuous pulse elements. The result is an interface that feels alive and reactive without imposing computational overhead on the user's machine.</p>
+
+      <h2>Creator Journey: Adhyansh Verma</h2>
+      <p>Adhyansh Verma began building web applications at a remarkably early age, driven by dissatisfaction with available tools rather than by academic curriculum. The key insight that shaped AsuraX came from recognizing that the gap between what modern browsers can execute locally and what developers were actually running locally was enormous — and entirely filled by cloud services charging users for what their own hardware could already do for free.</p>
+      <p>At <span class="auto-age">15</span> years old (a figure automatically computed from birth year 2011 and updated annually in the live application), Adhyansh has shipped multiple production-grade applications under the AsuraX umbrella. AvtarX represents the most technically ambitious: integrating secure generation orchestration, a multi-state UI with accessible keyboard interactions, responsive layouts across device classes from 320px mobile to 2560px ultrawide, SEO-structured content at meaningful depth across six interconnected pages, and a resilient IndexedDB caching architecture.</p>
+      <p>The one-year auto-increment on age displayed across the site isn't a novelty — it's a symbolic commitment. The platform, like its creator, is in perpetual development. What you experience today will be fundamentally more capable twelve months from now.</p>
+
+      <h2>Support and Sustainability</h2>
+      <p>AsuraX tools are and will remain free to use. The download page hosts clearly demarcated advertisement slots that fund continued development and hosting. This is a transparent, non-intrusive model: you get the tool for free, supported by clearly labeled ad placements that are never mixed into the generation interface. No paywalls, no credit systems, no "freemium" feature lockouts.</p>
+      <p>We thank every user who generates, shares, and returns to AvtarX. Your continued use and feedback directly shape the roadmap of the entire AsuraX ecosystem. Welcome to the future of privacy-first, local-first creative tooling.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Avtar<span>X</span> <span style="color:var(--text-3);font-size:12px;font-family:var(--font-m);margin-left:8px;">by AsuraX</span></div>
+      <nav class="footer-links">
+        <a href="index.html">Generator</a>
+        <a href="blogs.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <div class="footer-copy">© <span id="yr"></span> AvtarX · All rights reserved</div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
